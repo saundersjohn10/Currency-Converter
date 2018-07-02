@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allConv"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/searchSpinner"
+        android:layout_width="348dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginStart="19dp"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:popupBackground="#FFF"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/indvRate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goBack" />
+
+
+    <TextView
+        android:id="@+id/searchLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="190dp"
+        android:layout_marginLeft="65dp"
+        android:layout_marginRight="190dp"
+        android:layout_marginStart="65dp"
+        android:text="Search"
+        android:textColor="#00802b"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/searchSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/goBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/countriesInfo"
+        android:layout_width="372dp"
+        android:layout_height="314dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:maxLines="1000"
+        android:scrollbars="vertical"
+        android:textColor="#00802b"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/indvRate" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/countriesInfo"
+        app:layout_constraintEnd_toStartOf="@+id/countriesInfo"
+        app:layout_constraintStart_toEndOf="@+id/countriesInfo"
+        app:layout_constraintTop_toBottomOf="@+id/countriesInfo"
+        app:layout_constraintVertical_bias="0.759" />
+
+    <Button
+        android:id="@+id/goBack"
+        android:layout_width="73dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:background="#85C20D"
+        android:text="Back"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toTopOf="@+id/searchSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/searchLbl"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/indvRate"
+        android:layout_width="213dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginLeft="168dp"
+        android:layout_marginRight="167dp"
+        android:layout_marginStart="168dp"
+        android:gravity="center"
+        android:text="Rate"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/countriesInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchSpinner" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="313dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="313dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="All Rates"
+        app:layout_constraintBottom_toTopOf="@+id/countriesInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchSpinner"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

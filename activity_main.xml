@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/fromLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:text="Convert from"
+        app:layout_constraintBottom_toTopOf="@+id/fromSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"
+        app:layout_constraintVertical_bias="0.13" />
+
+    <EditText
+        android:id="@+id/amtBox"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+
+        android:backgroundTint="#000000"
+        android:ems="10"
+        android:fadingEdge="horizontal|vertical"
+        android:hint="Amount"
+        android:inputType="numberDecimal"
+        android:textCursorDrawable="@null"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/errorLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/fromSpinner" />
+
+    <TextView
+        android:id="@+id/toLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="to"
+        app:layout_constraintBottom_toTopOf="@+id/toSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/errorLbl"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/amtBox" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/fromSpinner"
+        android:layout_width="380dp"
+        android:layout_height="27dp"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:popupBackground="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/amtBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fromLabel" />
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:id="@+id/toSpinner"
+        android:layout_width="380dp"
+        android:layout_height="27dp"
+        android:clickable="false"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:popupBackground="#FFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/convertBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toLabel"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <Button
+        android:id="@+id/convertBtn"
+        android:layout_width="128dp"
+        android:layout_height="36dp"
+        android:background="#85C20D"
+        android:text="Convert"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/resultLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/toSpinner" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="210dp"
+        android:layout_height="146dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/errorLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:text="Enter an amount"
+        android:textColor="@android:color/holo_red_dark"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/toSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/amtBox" />
+
+    <TextView
+        android:id="@+id/rateLbl"
+        android:layout_width="297dp"
+        android:layout_height="26dp"
+        android:gravity="center_horizontal"
+        android:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Holo.Medium"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/resultLbl" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="8dp" />
+
+    <TextView
+        android:id="@+id/resultLbl"
+        android:layout_width="284dp"
+        android:layout_height="57dp"
+        android:gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Holo.Large"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/rateLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/convertBtn" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/errorLbl"
+        app:layout_constraintEnd_toStartOf="@+id/amtBox"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toEndOf="@+id/amtBox"
+        app:layout_constraintTop_toBottomOf="@+id/amtBox"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/infoBtn"
+        android:layout_width="41dp"
+        android:layout_height="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/fromSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/info" />
+
+    <Button
+        android:id="@+id/viewAll"
+        android:layout_width="89dp"
+        android:layout_height="31dp"
+        android:background="#00802b"
+        android:padding="10dp"
+        android:text=" view all"
+        android:textColor="@android:color/background_light"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultLbl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/convertBtn"
+        app:layout_constraintTop_toBottomOf="@+id/toSpinner" />
+
+
+</android.support.constraint.ConstraintLayout>
